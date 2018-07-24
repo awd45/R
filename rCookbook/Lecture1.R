@@ -1,42 +1,40 @@
 
 a<-1
 
-# ?¸?„°? ‰?‹°ë¸? ?™˜ê²?
+# Interactive environment
 pi
 sqrt(2)
-#ë²¡í„° ?ƒ?„± create
+# Creating vector
 c(1,2,3,4)
 
-# ë³€?ˆ˜ ?„ ?–¸ ?¼ë°˜ì ?œ¼ë¡? <- ?‚¬?š© ë§Žì´?•¨
+# Defining variables
 a=1
 a<-1
 ############################
 ####### 2.1 Printing Something
 ############################
-#ë²¡í„° ?ƒ?„± create
+#Creating vector
 tempVector <- c(1,2,3,4)
-#?‰ê·?
+#average
 mean(x)
-#?‘œì¤€?Ž¸ì°?
+#standard deviation
 sd(x)
-#ë¶„ì‚°
+#variance
 var(x)
 
-# ë¬¼ì–´ë³´ê¸° ì°¬ìŠ¤ ?‚¬?š©?•˜ê¸?
+# show function details
 ?matrix
 
-# ë©”íŠ¸ë¦??Š¤ (?–‰ê³? ?—´?´ ?žˆ?Š” ?°?´?„° ?ƒ?„±)
+# Crete matrix byrow <- fill the value using column order
 x <- matrix( c(1,2,3,4), 2,2)
 y <- matrix(tempVector,2,2)
-# ?–‰?„ ë¨¼ì?€ ?ˆ˜?–‰?•¨
+# Crete matrix byrow <- fill the value using row order
 z <- matrix(tempVector,2,2, byrow=2)
 
-#
-# cat ê³? print?˜ ì°¨ì´?Š” print?Š” ?¬ë§¤íŒ…?´ ê°€?Š¥?•˜?‹¤.
+
+# print
 cat("This is ML Class")
 cat("This is ML Class\n")
-
-print(pi)
 
 sqrt(x^2)
 
@@ -55,8 +53,8 @@ y <-4
 z <- sqrt(x^2 + y^2)
 print(z)
 
-# ?¸?±?Š¤ ?œ ?˜?•˜ê¸? ì²«ë²ˆì§¸ëŠ” ì§„ì§œ ì²«ë²ˆì§¸ë‹¤
-# ? „?‚° ?ž­ê¸°ì?€ê°€ ?•„?‹˜
+# Creating vector
+# Select specific vector point
 x <- c(1,2,3,4)
 x[1]
 
@@ -88,13 +86,12 @@ g(3,2)
 ############################
 ####### 2.4 Deleting Variables
 ############################
-### ë³€?ˆ˜ ë©”ëª¨ë¦¬ì—?„œ ?‹¤ë£¨ê¸°
-# ?‚¬?š©?œ ë³€?ˆ˜ ë¦¬ìŠ¤?Š¸
+# showing list of all variables
 ls()
 ?rm
-# ?Š¹? • ë³€?ˆ˜ ?‚­? œ
+# deleting specific variable
 rm(x)
-# ? „ì²´ë?€?ˆ˜ ?‚­? œ
+# deleting all varaiables
 rm(list=ls())
 
 ############################
@@ -115,17 +112,18 @@ v2 = c(4,5,6)
 v1
 v2
 
-## ë°±í„° ?•©ì¹˜ê¸°
+## concating vector
 w = c(v1,v2)
 w
 
 v1
-## vector ??€?ž…?´ 2ê°? ?˜¼?ž¬?• ê²½ìš° ë³€?™˜ê°€?Š¥?•œ ??€?ž…?œ¼ë¡? ?ž?™ë³€?™˜
+## concating vector and type is cenverted to String 
+## if new vector value can not be cast to original type
 v3 <- c("A","B","C")
 w1 <- c(v1,v3)
 w1
 
-## classë¥? ?†µ?•´ ??€?ž… ?™•?¸ ê°€?Š¥?•¨ class ê°€ ?” ë§Žì´ ?‚¬?š©?¨
+## Finding type of variable (class)
 #mode(w1)
 class(w1)
 
@@ -242,10 +240,6 @@ source("Runnable.R")
 # C:\Program Files\R\R-3.5.1\bin\x64
 
 
-
-#####################################
-# Break time
-#####################################
 #####################################
 # 4.2 Printing Fewer Digits (or More Digits)
 #####################################
@@ -416,3 +410,5 @@ l
 
 # pvalue -> if pvalue is less than 0.05 it is meaningful model
 summary(l)
+
+fix(Boston)
