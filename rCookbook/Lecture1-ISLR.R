@@ -70,3 +70,167 @@ dim(Boston)
 # (backward method) 
 # set all feature (13) then delete feature one by one
 
+###############################
+# Epsilon
+# y = ax + ax^2 + ax^3 + E (E)
+
+lm_fit2 =  lm(medv ~ lstat + I(lstat^2) + I(lstat^3) + I(lstat^4)     )
+lm_fit2
+summary(lm_fit2)
+
+####
+# 3.6.6 Qualitative Predictors
+############################
+
+# carsheet display
+#We will attempt to predict Sales (child car seat sales) 
+# in 400 locations
+# based on a number of predictors.
+
+# bad medium, goot
+
+fix(Carseats)
+names(Carseats)
+
+lm_fit = lm(Sales ~. + Income :Advertising +Price :Age , data=Carseats)
+
+lm_fit
+
+summary(lm_fit)
+
+attach (Carseats )
+contrasts (ShelveLoc )
+
+LoadLibraries=function (){
+   library (ISLR)
+   library (MASS)
+   print (" The libraries have been loaded .")
+}
+#library
+search()
+#packages
+installed.packages()
+
+LoadLibraries
+
+
+################################
+# 4.6 Lab: Logistic Regression, LDA, QDA, and KNN
+######################################
+
+# f(x) = e^x / 1+ e^x
+
+
+# compare up and down of stock price
+
+library (ISLR)
+names(Smarket)
+
+Smarket
+# 2001~ 20015
+
+summary(Smarket)
+# 2001 ~ 2005
+# Today up/down compare to yesterday
+
+# minus -9 index column
+# Year""Lag1""Lag2" "Lag3""Lag4""Lag5""Volume" "Today""Direction"   
+
+
+
+# correlation 
+# +1 plus cor 
+# -1 minus cor
+head(Smarket)
+names(Smarket)
+cor(Smarket[,-9])
+
+head(Smarket[-9])
+
+attach (Smarket )
+plot(Volume )
+
+#############################
+# 4.6.2 Logistic Regression
+#############################
+### Classification 0 or 1
+### P = ex/1+ex
+#This data set consists of
+#percentage returns for the S&P 500 stock index over 1, 250 days, from the
+#beginning of 2001 until the end of 2005. For each date, we have recorded
+#the percentage returns for each of the five previous trading days, Lag1
+#through Lag5. We have also recorded Volume (the number of shares traded
+#                                            4.6 Lab: Logistic Regression, LDA, QDA, and KNN 155
+#                                            on the previous day, in billions
+glm_fit=glm(Direction ~ Lag1+Lag2+Lag3+Lag4+Lag5+Volume ,
+            data=Smarket ,family =binomial )
+
+summary (glm_fit )
+
+coef(glm_fit)
+
+summary (glm_fit )$coef
+
+summary (glm_fit )$coef [,4]
+
+
+glm.probs =predict (glm_fit ,type ="response")
+glm.probs [1:10]
+
+# defining up -> 1 down -> 0
+contrasts (Direction )
+
+
+glm.pred = rep("Down", 1250)
+
+# if the prob value is upper than 0.5 put "Up"
+glm.pred[ glm.probs > 0.5] ="Up"
+
+table(glm.pred, Direction)
+
+Direction
+
+?Predict
+
+# train True/False
+train =(Year <2005)
+
+# get Data if train is false
+
+Smarkek_2000= Smarket [ train ,]
+Smarkek_2005= Smarket [! train ,]
+
+Direction_2005 = Smarkek_2005["Direction"]
+
+summary(Smarkek_2005)
+
+dim(Smarkek_2000)
+dim(Smarkek_2005)
+dim(Direction_2005)
+
+Smarkek_2000
+
+#### Training 
+# binomial -> logistic
+# subset = train -> use only training set
+glm_fit=glm(Direction ~ Lag1+Lag2+Lag3+Lag4+Lag5+Volume ,
+            data=Smarket ,family =binomial , subset = train )
+
+glm_probs = predict(glm_fit, Smarkek_2005, type="response")
+# Walk forward
+
+glm_probs
+dim(Smarkek_2005)
+
+glm_pred = rep("Down", 252)
+glm_pred[ glm_probs > 0.5] = "Up"
+
+glm_pred
+
+final_result = cbind(Smarkek_2005,glm_pred)
+
+final_result$Compare = final_result$Direction == final_result$glm_pred
+
+final_result
+
+ls()

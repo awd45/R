@@ -267,8 +267,6 @@ samp
 # header = FASLE , sep option can be changed
 samp <- read.csv("data.csv", header=FALSE)
 samp
-samp2 <- read.csv("data2.csv", header=FALSE, sep=";")
-samp2
 
 #####################################
 # 4.10 Reading Tabular or CSV Data from the Web
@@ -329,13 +327,21 @@ a*b
 
 #####################################
 # 5.18 Initializing a Data Frame from Column Data
-#####################################
+####################################
+# difference between matrix and dataframe
 # matrix has only numeric value
 
+getwd()
+setwd("D://rLecture//rCookbook")
+
+?read.csv
+# header = FASLE , sep option can be changed
+samp <- read.csv("data.csv", header=FALSE)
+samp
 class(samp)
 samp
 
-## Extracting Specific rows
+## Extracting data using condition
 ## using condition <- subset is more frequent
 s <- subset(samp, subset = (V2 > 2))
 t <- subset(samp, subset = (V2 > 2))$V2
@@ -347,7 +353,7 @@ ans
 #####################################
 #5.25 Changing the Names of Data Frame Columns
 #####################################
-# change type matrix -> dataframe
+# Changing matrix data to dataframe
 x <- matrix( c(1,2,3,4), 2,2)
 y <- matrix(tempVector,2,2)
 z <- matrix(tempVector,2,2, byrow=2)
@@ -357,7 +363,7 @@ df2 <-as.data.frame(z)
 class(df2)
 df2
 
-# column name change
+# Changing column name in Dataframe
 colnames(df2) <- c("before","treatment")
 df2
 
@@ -410,5 +416,3 @@ l
 
 # pvalue -> if pvalue is less than 0.05 it is meaningful model
 summary(l)
-
-fix(Boston)
