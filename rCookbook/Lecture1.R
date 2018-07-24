@@ -1,38 +1,38 @@
 
 a<-1
 
-# ì¸í„°ë ‰í‹°ë¸Œ í™˜ê²½
+# ?¸?„°? ‰?‹°ë¸? ?™˜ê²?
 pi
 sqrt(2)
-#ë²¡í„° ìƒì„± create
+#ë²¡í„° ?ƒ?„± create
 c(1,2,3,4)
 
-# ë³€ìˆ˜ ì„ ì–¸ ì¼ë°˜ì ìœ¼ë¡œ <- ì‚¬ìš© ë§Žì´í•¨
+# ë³€?ˆ˜ ?„ ?–¸ ?¼ë°˜ì ?œ¼ë¡? <- ?‚¬?š© ë§Žì´?•¨
 a=1
 a<-1
 ############################
 ####### 2.1 Printing Something
 ############################
-#ë²¡í„° ìƒì„± create
+#ë²¡í„° ?ƒ?„± create
 tempVector <- c(1,2,3,4)
-#í‰ê· 
+#?‰ê·?
 mean(x)
-#í‘œì¤€íŽ¸ì°¨
+#?‘œì¤€?Ž¸ì°?
 sd(x)
 #ë¶„ì‚°
 var(x)
 
-# ë¬¼ì–´ë³´ê¸° ì°¬ìŠ¤ ì‚¬ìš©í•˜ê¸°
+# ë¬¼ì–´ë³´ê¸° ì°¬ìŠ¤ ?‚¬?š©?•˜ê¸?
 ?matrix
 
-# ë©”íŠ¸ë¦­ìŠ¤ (í–‰ê³¼ ì—´ì´ ìžˆëŠ” ë°ì´í„° ìƒì„±)
+# ë©”íŠ¸ë¦??Š¤ (?–‰ê³? ?—´?´ ?žˆ?Š” ?°?´?„° ?ƒ?„±)
 x <- matrix( c(1,2,3,4), 2,2)
 y <- matrix(tempVector,2,2)
-# í–‰ì„ ë¨¼ì € ìˆ˜í–‰í•¨
+# ?–‰?„ ë¨¼ì?€ ?ˆ˜?–‰?•¨
 z <- matrix(tempVector,2,2, byrow=2)
 
 #
-# cat ê³¼ printì˜ ì°¨ì´ëŠ” printëŠ” í¬ë§¤íŒ…ì´ ê°€ëŠ¥í•˜ë‹¤.
+# cat ê³? print?˜ ì°¨ì´?Š” print?Š” ?¬ë§¤íŒ…?´ ê°€?Š¥?•˜?‹¤.
 cat("This is ML Class")
 cat("This is ML Class\n")
 
@@ -55,8 +55,8 @@ y <-4
 z <- sqrt(x^2 + y^2)
 print(z)
 
-# ì¸ë±ìŠ¤ ìœ ì˜í•˜ê¸° ì²«ë²ˆì§¸ëŠ” ì§„ì§œ ì²«ë²ˆì§¸ë‹¤
-# ì „ì‚° ëž­ê¸°ì§€ê°€ ì•„ë‹˜
+# ?¸?±?Š¤ ?œ ?˜?•˜ê¸? ì²«ë²ˆì§¸ëŠ” ì§„ì§œ ì²«ë²ˆì§¸ë‹¤
+# ? „?‚° ?ž­ê¸°ì?€ê°€ ?•„?‹˜
 x <- c(1,2,3,4)
 x[1]
 
@@ -88,13 +88,13 @@ g(3,2)
 ############################
 ####### 2.4 Deleting Variables
 ############################
-### ë³€ìˆ˜ ë©”ëª¨ë¦¬ì—ì„œ ë‹¤ë£¨ê¸°
-# ì‚¬ìš©ëœ ë³€ìˆ˜ ë¦¬ìŠ¤íŠ¸
+### ë³€?ˆ˜ ë©”ëª¨ë¦¬ì—?„œ ?‹¤ë£¨ê¸°
+# ?‚¬?š©?œ ë³€?ˆ˜ ë¦¬ìŠ¤?Š¸
 ls()
 ?rm
-# íŠ¹ì • ë³€ìˆ˜ ì‚­ì œ
+# ?Š¹? • ë³€?ˆ˜ ?‚­? œ
 rm(x)
-# ì „ì²´ë³€ìˆ˜ ì‚­ì œ
+# ? „ì²´ë?€?ˆ˜ ?‚­? œ
 rm(list=ls())
 
 ############################
@@ -115,17 +115,17 @@ v2 = c(4,5,6)
 v1
 v2
 
-## ë°±í„° í•©ì¹˜ê¸°
+## ë°±í„° ?•©ì¹˜ê¸°
 w = c(v1,v2)
 w
 
 v1
-## vector íƒ€ìž…ì´ 2ê°œ í˜¼ìž¬í• ê²½ìš° ë³€í™˜ê°€ëŠ¥í•œ íƒ€ìž…ìœ¼ë¡œ ìžë™ë³€í™˜
+## vector ??€?ž…?´ 2ê°? ?˜¼?ž¬?• ê²½ìš° ë³€?™˜ê°€?Š¥?•œ ??€?ž…?œ¼ë¡? ?ž?™ë³€?™˜
 v3 <- c("A","B","C")
 w1 <- c(v1,v3)
 w1
 
-## classë¥¼ í†µí•´ íƒ€ìž… í™•ì¸ ê°€ëŠ¥í•¨ class ê°€ ë” ë§Žì´ ì‚¬ìš©ë¨
+## classë¥? ?†µ?•´ ??€?ž… ?™•?¸ ê°€?Š¥?•¨ class ê°€ ?” ë§Žì´ ?‚¬?š©?¨
 #mode(w1)
 class(w1)
 
@@ -139,12 +139,280 @@ median(x)
 sd(x)
 var(x)
 
-# ë²¡í„°ì˜ ì—°ì‚° 
-# Rì˜ ìž¥ì 
-# (loop ëŒë¦¬ì§€ ì•Šê³  í•œë¬¸ìž¥ìœ¼ë¡œ í‘œí˜„ê°€ëŠ¥í•˜ë‹¤)
+# r feature
+# (Do not use loop -> vector operation)
 y <- log(x+1)
 z <- x+1
 z
 
-# xì™€ y ê°’ì˜ ìƒê´€ê´€ê³„ í™•ì¸
+# Calculating corr
 cor(x,y)
+
+rm(list=ls())
+
+############################
+####### 2.7 Sequence !!!!!!!!
+############################
+x = c(1:100)
+y = c(100:1)
+x
+
+f = c(1:100)
+y = 2 * f +1
+
+lm_r = lm ( y ~ f)
+
+coef(lm_r)
+
+summary(lm_r)
+resid(lm_r) 
+fitted(lm_r) 
+plot(lm_r)
+
+# Well
+data()
+
+
+############################
+####### Etc
+############################
+## Setting working directory
+getwd()
+setwd("D://rLecture//rCookbook")
+
+x = c(1:100)
+y = c(100:1)
+x
+
+f = c(1:100)
+y = 2 * f +1
+
+lm_r = lm ( y ~ f)
+
+coef(lm_r)
+
+summary(lm_r)
+resid(lm_r) 
+fitted(lm_r) 
+plot(lm_r)
+
+lm_r
+
+# Wellknown data
+data()
+
+## Loading data
+data(iris)
+## Checking iris data
+head(iris)
+
+## book introduction type:pdf
+islr type:pdf
+
+## packge Install
+install.packages("ISLR")
+## library load
+library(ISLR)
+## Searching library
+search()
+
+############################
+####### 3.5. Displaying the Search Path
+############################
+# Searching Currnetly loaded library
+search()
+
+# MASS
+# MASS Wellknow package
+# Modern Applied Statistics With S 
+library("MASS")
+search()
+
+############################
+####### 3.12 Running a Script
+############################
+source("Runnable.R")
+
+############################
+####### 3.13 Running a Batch Script
+############################
+# Setting System Variables
+# R CMD BATCH scriptfile outputfile
+# R CMD BATCH Runnable.R log.txt
+# C:\Program Files\R\R-3.5.1\bin\x64
+
+
+
+#####################################
+# Break time
+#####################################
+#####################################
+# 4.2 Printing Fewer Digits (or More Digits)
+#####################################
+q <- seq(from =0 , to =3, by = 0.5)
+# normalization  avg=0 stdev = 1
+pnorm(q)
+rount(pnorm(-q),3)
+
+# Create Dataframe
+tbl <- data.frame(Quant = q, Lower = pnorm(-q), Upper = pnorm(q))
+tbl
+
+#####################################
+# 4.2 Printing Fewer Digits (or More Digits)
+#####################################
+
+#####################################
+# 4.5 Dealing with ¡°Cannot Open File¡± in Windows
+#####################################
+getwd()
+setwd("D://rLecture//rCookbook")
+samp <- read.csv("data.csv")
+samp
+?read.csv
+# header = FASLE , sep option can be changed
+samp <- read.csv("data.csv", header=FALSE)
+samp
+samp2 <- read.csv("data2.csv", header=FALSE, sep=";")
+samp2
+
+#####################################
+# 4.10 Reading Tabular or CSV Data from the Web
+#####################################
+
+#####################################
+# 4.13 Reading from MySQL Databases
+#####################################
+
+#####################################
+# Chapter 5 Data Structure
+#####################################
+
+#Vector, Lists
+
+#####################################
+# 5.2 Inserting Data into a Vector
+#####################################
+1:10
+
+append(1:10, 99, after = 5)
+append(1:10, 99, after = 0)
+
+# cbind rbind
+x0 <- 1:10
+y0 <- 10:19
+z0 <- cbind(x0,y,y0)
+
+x <- 1:10
+y <- 10:19
+z1 <- cbind(x,y)
+z
+a <- 1:6
+# if row count is not matching iter the value
+z2 <- cbind(x,a)
+# rbind must match number of columns
+z3 <- rbind(z1,z0)
+
+# Vector
+
+# Summarizing Data
+# Feature, Factor
+head(iris)
+summary(iris)
+
+# Select specific column
+iris$Sepal.Length
+
+# Select specific row using index
+iris$Sepal.Length[10]
+# Select specific row using value
+iris[iris$Sepal.Length==4.9,]
+
+# vector operation
+a <- c(1:5)
+b <- c(2:6)
+a*b
+
+#####################################
+# 5.18 Initializing a Data Frame from Column Data
+#####################################
+# matrix has only numeric value
+
+class(samp)
+samp
+
+## Extracting Specific rows
+## using condition <- subset is more frequent
+s <- subset(samp, subset = (V2 > 2))
+t <- subset(samp, subset = (V2 > 2))$V2
+t
+
+ans <- samp[samp$V2>2,]$V2
+ans
+
+#####################################
+#5.25 Changing the Names of Data Frame Columns
+#####################################
+# change type matrix -> dataframe
+x <- matrix( c(1,2,3,4), 2,2)
+y <- matrix(tempVector,2,2)
+z <- matrix(tempVector,2,2, byrow=2)
+z
+class(z)
+df2 <-as.data.frame(z)
+class(df2)
+df2
+
+# column name change
+colnames(df2) <- c("before","treatment")
+df2
+
+#####################################
+#apply function -> column create using
+#####################################
+
+#######################################
+# Drawing chart
+#######################################
+
+# delete all variables
+rm(list=ls())
+
+#rnorm (random normalization mean = 0 , sd = 1)
+?rnorm
+x = rnorm(100)
+
+# avg = 10 std = 1
+# create dataset 
+# y = 2 * x + 1
+x = rnorm(100,10,1)
+y = 2 * x + 1
+plot(x,y)  
+# y = 2 * x + 1   + error
+# x = c(1:100)
+# e ÀÔ½Ç·Ð = rnorm(100,0,1)
+e = rnorm(100,0,1)
+e = rnorm(100, sd = 5)
+e  
+y = 2 * x + 1 + e
+plot(x,y)
+
+# 
+x = c(1:100)
+y = 2* x +1 +e
+plot(x,y)
+
+
+x = rnorm(100, mean = 10, sd = 5)
+e = rnorm(100, sd = 5)
+y = 3 * x + 10 + e
+
+plot(x,y)
+# lm model
+?lm
+l = lm(y ~ x)
+abline(l)
+l
+
+# pvalue -> if pvalue is less than 0.05 it is meaningful model
+summary(l)
