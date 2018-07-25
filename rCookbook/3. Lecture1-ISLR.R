@@ -17,6 +17,8 @@ sapply(pkgs.to.remove, remove.packages, lib = path.lib)
 ############################################################
 ############################################################
 
+install.packages("ISLR")
+
 ### i
 
 getwd()
