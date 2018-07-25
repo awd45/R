@@ -248,9 +248,34 @@ q <- seq(from =0 , to =3, by = 0.5)
 pnorm(q)
 rount(pnorm(-q),3)
 
+#####################################
 # Create Dataframe
-tbl <- data.frame(Quant = q, Lower = pnorm(-q), Upper = pnorm(q))
-tbl
+testDf <- data.frame(Quant = q, Lower = pnorm(-q), Upper = pnorm(q))
+testDf
+
+
+dateIndex = c('2017-12-01','2017-12-02','2017-12-03','2017-12-04','2017-12-05','2017-12-06')
+productNameList = c('REF','TV','MOBILE','REF','MOBILE',"")
+volumeList = c(1000,2000,1500,1200,1700,1000)
+
+testDf <- data.frame( date = dateIndex,
+                    product = productNameList,
+                    volume = volumeList)
+### Dataframe select
+### Selecting column
+#install.packages("data.table")
+library(data.table) 
+
+## dataframe
+## datatable
+testDt <- data.table(testDf) 
+
+## selecting Specific Columns
+testDtSelectColumns = testDt[, .(product)]
+  
+## selecting Specific Row
+testDtSelectRows = testDt[product %in% c("REF","TV") & volume >= 1000]
+testDtSelectRows = testDt[product == "REF" & volume >= 1000]
 
 #####################################
 # 4.2 Printing Fewer Digits (or More Digits)
@@ -261,11 +286,11 @@ tbl
 #####################################
 getwd()
 setwd("D://rLecture//rCookbook")
-samp <- read.csv("data.csv")
+samp <- read.csv("./data/data.csv")
 samp
 ?read.csv
 # header = FASLE , sep option can be changed
-samp <- read.csv("data.csv", header=FALSE)
+samp <- read.csv("./data/data.csv", header=FALSE)
 samp
 
 #####################################
@@ -336,7 +361,7 @@ setwd("D://rLecture//rCookbook")
 
 ?read.csv
 # header = FASLE , sep option can be changed
-samp <- read.csv("data.csv", header=FALSE)
+samp <- read.csv("./data/data.csv", header=FALSE)
 samp
 class(samp)
 samp
